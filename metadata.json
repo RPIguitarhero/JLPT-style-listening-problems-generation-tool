@@ -1,0 +1,6 @@
+{
+  "name": "JLPT Listening Practice",
+  "description": "Multi-speaker text-to-speech web application for Japanese JLPT listening practice, featuring dialogue creator, interactive quizzes, and downloadable MP3 audio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

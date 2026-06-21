@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Core global overrides for comfort of eye reading and clean themes */
+html, body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* 🌙 DARK COZY SUNSET SEPIA THEME */
+.dark-theme,
+body.dark-theme,
+html.dark-theme {
+  background-color: #140f0c !important; /* Rich roasted cacao espresso */
+  color: #dfcebf !important; /* Soft warm reading linen text */
+}
+
+/* Class-based targeted overrides in dark mode */
+.dark-theme .bg-white {
+  background-color: #1d1512 !important;
+  border-color: #2f221c !important;
+  color: #dfcebf !important;
+}
+
+.dark-theme .bg-slate-50 {
+  background-color: #1d1512 !important;
+}
+
+.dark-theme .bg-slate-100 {
+  background-color: #140f0c !important;
+}
+
+.dark-theme .bg-slate-800 {
+  background-color: #281e1a !important;
+  border-color: #3f2e26 !important;
+}
+
+.dark-theme .bg-slate-900 {
+  background-color: #150f0c !important;
+}
+
+/* Overwrite slate colors in dark mode to maintain high readability and soft contrast */
+.dark-theme .text-slate-900 { color: #fbf8f5 !important; }
+.dark-theme .text-slate-800 { color: #dfcebf !important; }
+.dark-theme .text-slate-700 { color: #dfcebf !important; }
+.dark-theme .text-slate-600 { color: #c2aea0 !important; }
+.dark-theme .text-slate-500 { color: #a58e80 !important; }
+.dark-theme .text-slate-400 { color: #8c7365 !important; }
+
+/* Overwrite borders in dark mode */
+.dark-theme .border-slate-100 { border-color: #251b17 !important; }
+.dark-theme .border-slate-200 { border-color: #2f221c !important; }
+.dark-theme .border-slate-300 { border-color: #3f2e26 !important; }
+.dark-theme .border-slate-700 { border-color: #33261f !important; }
+.dark-theme .border-slate-800 { border-color: #2a1e19 !important; }
+.dark-theme .border-slate-850 { border-color: #221814 !important; }
+
+/* Input structures in dark mode */
+.dark-theme input, 
+.dark-theme select, 
+.dark-theme textarea {
+  background-color: #1c1411 !important;
+  color: #eedfce !important;
+  border-color: #2f221c !important;
+}
+
+.dark-theme input:focus, 
+.dark-theme select:focus, 
+.dark-theme textarea:focus {
+  border-color: #cf623a !important;
+  outline: none !important;
+}
+
+/* Custom cards mapping for Speaker Roles in Dark Mode */
+.dark-theme .border-blue-105,
+.dark-theme .border-blue-100 { border-color: #352a1e !important; }
+.dark-theme .bg-blue-50 \/40,
+.dark-theme .bg-blue-50 { background-color: #231c15 !important; }
+
+.dark-theme .border-pink-105,
+.dark-theme .border-pink-100 { border-color: #3d2525 !important; }
+.dark-theme .bg-pink-50 \/40,
+.dark-theme .bg-pink-50 { background-color: #251a1a !important; }
+
+/* Custom feedback card states in Dark Mode */
+.dark-theme .bg-rose-50\/40,
+.dark-theme .bg-rose-500\/10 {
+  background-color: rgba(40, 20, 20, 0.7) !important;
+  border-color: #b5534c !important;
+}
+
+.dark-theme .bg-emerald-50\/40,
+.dark-theme .bg-emerald-500\/10 {
+  background-color: rgba(30, 34, 19, 0.7) !important;
+  border-color: #8ba85a !important;
+}
+
+
+/* ☀️ LIGHT HIGH-LEGIBILITY COZY COCOA LIGHT THEME */
+.light-theme,
+body.light-theme,
+html.light-theme {
+  background-color: #faf8f5 !important; /* Cozy warm paper light background */
+  color: #2c1d11 !important; /* Soft dark cocoa text for high reading comfort */
+}
+
+/* Clean standard cards inside light mode */
+.light-theme .bg-white {
+  background-color: #ffffff !important;
+  border-color: #e6dfd5 !important;
+  color: #1e1510 !important;
+}
+
+/* Custom speaker role card styling in Light mode */
+.light-theme .border-blue-100 {
+  border-color: #cbdcf4 !important;
+}
+.light-theme .bg-blue-50 {
+  background-color: #f1f7fc !important;
+}
+.light-theme .border-pink-100 {
+  border-color: #fcd5dc !important;
+}
+.light-theme .bg-pink-50 {
+  background-color: #fdf5f6 !important;
+}
+
+/* Text overrides in Light mode to look beautifully dark and readable */
+.light-theme .text-slate-900 { color: #150f0c !important; }
+.light-theme .text-slate-800 { color: #1e1510 !important; }
+.light-theme .text-slate-700 { color: #3d2f25 !important; }
+.light-theme .text-slate-600 { color: #5a4b40 !important; }
+.light-theme .text-slate-500 { color: #736257 !important; }
+.light-theme .text-slate-400 { color: #9c8a7e !important; }
+
+/* Keep progress range sliders responsive and themed */
+input[type="range"] {
+  accent-color: #cf623a !important;
+}
+
+
+/* 🚨 PREVENTS ANY UNREADABLE CONTRAST ON THE TOP HEADER BAR NATIVELY 🚨 */
+header.bg-slate-900,
+.app-container header.bg-slate-900 {
+  background-color: #1a120e !important; /* Unified premium dark cocoa background */
+  border-color: #2b1d16 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure children in header are always white or light, never black/white blended list */
+header.bg-slate-900 h1,
+header.bg-slate-900 h2,
+header.bg-slate-900 p,
+header.bg-slate-900 span,
+header.bg-slate-900 select,
+header.bg-slate-900 option,
+header.bg-slate-900 button {
+  color: #ffffff !important;
+}
+
+header.bg-slate-900 p.text-slate-400 {
+  color: #dfcdbf !important;
+}
+
+header.bg-slate-900 select {
+  background-color: #2b1d16 !important;
+  color: #ffffff !important;
+  border-color: #3d2b21 !important;
+}
+
+header.bg-slate-900 .bg-slate-800 {
+  background-color: #2b1d16 !important;
+  border-color: #3d2b21 !important;
+}
+
+header.bg-slate-900 .text-slate-400 {
+  color: #d2c3b8 !important;
+}
+
+/* Terracotta custom primary coloring button styles */
+.bg-indigo-600,
+.app-container .bg-indigo-600 {
+  background-color: #cf623a !important; /* warm high contrast terracotta */
+  color: #ffffff !important;
+}
+.bg-indigo-600:hover,
+.app-container .bg-indigo-600:hover {
+  background-color: #b54f2a !important;
+}
+
+.text-indigo-600,
+.app-container .text-indigo-600 {
+  color: #cf623a !important;
+}
+.text-indigo-600:hover,
+.app-container .text-indigo-600:hover {
+  color: #b54f2a !important;
+}
+
+.bg-indigo-50,
+.app-container .bg-indigo-50 {
+  background-color: #fdf3ef !important;
+  color: #cf623a !important;
+}
+.dark-theme .bg-indigo-50,
+.app-container.dark-theme .bg-indigo-50 {
+  background-color: #2d1811 !important;
+  color: #cf623a !important;
+}
+
+/* Clean Custom scrollbar configurations */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cf623a40;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cf623a80;
+}
